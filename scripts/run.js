@@ -5,7 +5,7 @@
 
 var path = require("path");
 var fs = require("fs");
-var jshint = require("jshint").JSHINT;
+var jshint = require("jshint-jsx").JSXHINT;
 var minify = require("jsonminify");
 
 // Older versions of node have `existsSync` in the `path` module, not `fs`. Meh.
