@@ -124,14 +124,14 @@ class JshintCommand(sublime_plugin.TextCommand):
 
     if int(sublime.version()) >= 3000:
       icon = "Packages/" + package_name + "/warning.png"
-      self.view.add_regions("jshint_errors", regions, "keyword", icon,
+      self.view.add_regions("jshint_errors", regions, "invalid", icon,
         sublime.DRAW_EMPTY |
         sublime.DRAW_NO_FILL |
         sublime.DRAW_NO_OUTLINE |
         sublime.DRAW_SQUIGGLY_UNDERLINE)
     else:
       icon = ".." + os.path.sep + package_name + os.path.sep + "warning"
-      self.view.add_regions("jshint_errors", regions, "keyword", icon,
+      self.view.add_regions("jshint_errors", regions, "invalid", icon,
         sublime.DRAW_EMPTY |
         sublime.DRAW_OUTLINED)
 
